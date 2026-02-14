@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Million Dollar Work — Building the Next Ten</title>
+<meta name="description" content="Built and sold a $100M/year brand. Now building multiple businesses publicly — AI tools, physical products, dating apps. Follow the journey.">
+<meta property="og:title" content="Million Dollar Work — Building the Next Ten">
+<meta property="og:description" content="Built and sold a $100M/year brand. Now building multiple businesses publicly. Follow the journey.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://milliondollar.work">
+<meta property="og:image" content="https://milliondollar.work/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@milliondollarwork">
+<meta name="twitter:title" content="Million Dollar Work — Building the Next Ten">
+<meta name="twitter:description" content="Built and sold a $100M/year brand. Now building multiple businesses publicly. Follow the journey.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Lunk","url":"https://milliondollar.work","sameAs":["https://x.com/milliondollarwork"],"jobTitle":"Founder","worksFor":{"@type":"Organization","name":"LLJ Inc"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Inter', 'sans-serif'] },
+      colors: { brand: '#F59E0B', dark: '#0a0a0a' }
+    }
+  }
+}
+</script>
+<style>
+  body { background: #0a0a0a; }
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  .card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.4); }
+  .hero-gradient { background: radial-gradient(ellipse at 50% 0%, rgba(245,158,11,0.06) 0%, transparent 60%); }
+</style>
+</head>
+<body class="font-sans text-gray-300 antialiased">
+
+<!-- Hero -->
+<section class="hero-gradient min-h-screen flex items-center justify-center px-6">
+  <div class="max-w-3xl text-center fade-in">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-800 text-white leading-tight mb-6">
+      I built a brand that did <span class="text-brand">$100M/year</span>.<br>Now I'm building the next ten.
+    </h1>
+    <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">Founder. Builder. Doing it all in public.</p>
+    <a href="https://x.com/milliondollarwork" target="_blank" class="inline-flex items-center gap-2 bg-brand text-dark font-semibold px-8 py-3.5 rounded-full hover:bg-amber-400 transition-colors text-lg">
+      Follow the journey on X
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="py-24 px-6">
+  <div class="max-w-2xl mx-auto text-center fade-in">
+    <h2 class="text-sm font-semibold text-brand uppercase tracking-widest mb-6">The Story</h2>
+    <p class="text-xl sm:text-2xl text-gray-200 leading-relaxed">
+      Built and sold a <span class="text-white font-semibold">$100M/year brand</span>. Now building multiple businesses publicly — from AI tools to physical products to dating apps.
+    </p>
+    <p class="text-lg text-gray-400 mt-6">Follow along, invest, or just watch.</p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-sm font-semibold text-brand uppercase tracking-widest mb-12 text-center fade-in">Current Projects</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="projects"></div>
+  </div>
+</section>
+
+<!-- Philosophy -->
+<section class="py-24 px-6 border-t border-white/5">
+  <div class="max-w-3xl mx-auto text-center fade-in">
+    <h2 class="text-sm font-semibold text-brand uppercase tracking-widest mb-12">The Rules</h2>
+    <div class="space-y-6 text-xl sm:text-2xl font-semibold text-white">
+      <p>"Ship fast. Fix later."</p>
+      <p>"Revenue &gt; funding."</p>
+      <p>"Build what people need, not what sounds cool."</p>
+      <p class="text-brand">"One person can build a $100M brand. I proved it."</p>
+    </div>
+  </div>
+</section>
+
+<!-- Connect -->
+<section class="py-24 px-6 border-t border-white/5">
+  <div class="max-w-2xl mx-auto text-center fade-in">
+    <h2 class="text-sm font-semibold text-brand uppercase tracking-widest mb-6">Follow the Journey</h2>
+    <p class="text-gray-400 mb-10">DM me on X if you want to collaborate, invest, or just talk business.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://x.com/milliondollarwork" target="_blank" class="inline-flex items-center justify-center gap-2 bg-white text-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-200 transition-colors">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Follow on X
+      </a>
+      <a href="https://t.me/+qrHYhmrC2NoyNWVl" target="_blank" class="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">
+        Join Telegram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-10 px-6 border-t border-white/5 text-center text-sm text-gray-500">
+  <p>&copy; LLJ Inc. &middot; milliondollar.work</p>
+</footer>
+
+<script>
+const projects = [
+  { name: "Cocok", desc: "AI-powered dating app for Indonesia", status: "live", url: "https://cocok.app" },
+  { name: "Dibantu", desc: "WhatsApp AI assistant for SMEs", status: "building", url: "https://dibantu.com" },
+  { name: "Bangun", desc: "AI construction cost estimation", status: "live", url: "https://bangun.com" },
+  { name: "FixoTrip", desc: "Travel emergency rescue service", status: "live", url: "https://fixotrip.com" },
+  { name: "Atusan", desc: "Premium herbal oil (100 plants)", status: "live", url: "https://atusan.com" },
+  { name: "Poowangi", desc: "Toilet spray brand", status: "live", url: "https://poowangi.com" },
+  { name: "OLO Cafe", desc: "Physical cafe in Karawang", status: "live", url: null },
+  { name: "Mine-World", desc: "Telegram tap-to-mine game", status: "live", url: null },
+  { name: "DogDash", desc: "Telegram runner game", status: "live", url: null },
+];
+const statusMap = { live: ['🟢','Live','text-green-400'], building: ['🟡','Building','text-yellow-400'], idea: ['🔴','Idea','text-red-400'] };
+const grid = document.getElementById('projects');
+projects.forEach(p => {
+  const [dot, label, cls] = statusMap[p.status];
+  const inner = `
+    <div class="flex items-center justify-between mb-3">
+      <h3 class="text-white font-semibold text-lg">${p.name}</h3>
+      <span class="text-xs ${cls} font-medium">${dot} ${label}</span>
+    </div>
+    <p class="text-gray-400 text-sm">${p.desc}</p>
+    ${p.url ? `<a href="${p.url}" target="_blank" class="inline-block mt-4 text-xs text-brand hover:underline">${p.url.replace('https://','')}&nbsp;→</a>` : ''}
+  `;
+  const el = document.createElement(p.url ? 'a' : 'div');
+  if (p.url) { el.href = p.url; el.target = '_blank'; }
+  el.className = 'card block bg-white/[0.03] border border-white/10 rounded-2xl p-6 fade-in';
+  el.innerHTML = inner;
+  grid.appendChild(el);
+});
+
+// Scroll animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
