@@ -1,202 +1,242 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Million Dollar Work — Building the Next Ten</title>
-<meta name="description" content="Built and sold a $100M/year brand. Now building multiple businesses publicly — AI tools, physical products, dating apps. Follow the journey.">
-<meta property="og:title" content="Million Dollar Work — Building the Next Ten">
-<meta property="og:description" content="Built and sold a $100M/year brand. Now building multiple businesses publicly. Follow the journey.">
+<title>MILLIONDOLLAR.WORK — Creative Studio / Venture Lab</title>
+<meta name="description" content="Creative studio and venture lab building across property, tech, food, fashion, gaming, and wellness. From the team behind a $100M/year brand.">
+<meta property="og:title" content="MILLIONDOLLAR.WORK">
+<meta property="og:description" content="Creative Studio / Venture Lab / Jakarta. Building things that matter.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://milliondollar.work">
-<meta property="og:image" content="https://milliondollar.work/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@milliondwork">
-<meta name="twitter:title" content="Million Dollar Work — Building the Next Ten">
-<meta name="twitter:description" content="Built and sold a $100M/year brand. Now building multiple businesses publicly. Follow the journey.">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Lunk","url":"https://milliondollar.work","sameAs":["https://x.com/milliondwork"],"jobTitle":"Founder","worksFor":{"@type":"Organization","name":"LLJ Inc"}}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: { sans: ['Inter', 'sans-serif'] },
-      colors: { brand: '#F59E0B', dark: '#0a0a0a' }
-    }
-  }
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"MillionDollar.Work","url":"https://milliondollar.work","description":"Creative studio and venture lab building brands across property, tech, food, fashion, gaming, and wellness.","address":{"@type":"PostalAddress","addressLocality":"Jakarta","addressCountry":"ID"}}
 </script>
 <style>
-  body { background: #0a0a0a; }
-  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
-  .card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.4); }
-  .hero-gradient { background: radial-gradient(ellipse at 50% 0%, rgba(245,158,11,0.06) 0%, transparent 60%); }
-  .invest-card { border: 1px solid rgba(245,158,11,0.2); background: rgba(245,158,11,0.03); }
-  .invest-card:hover { border-color: rgba(245,158,11,0.5); box-shadow: 0 8px 30px rgba(245,158,11,0.1); transform: translateY(-4px); }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#0a0a0a;--white:#f0f0f0;--grey:#666;--accent:#ff5722;--mono:'JetBrains Mono',monospace;--sans:'Inter',sans-serif;--grid:rgba(255,255,255,.04)}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--black);color:var(--white);font-family:var(--sans);line-height:1.6;overflow-x:hidden;position:relative}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+::selection{background:var(--accent);color:var(--black)}
+a{color:inherit;text-decoration:none}
+.mono{font-family:var(--mono)}
+.accent{color:var(--accent)}
+.strike{text-decoration:line-through;opacity:.5}
+.quote::before{content:'"'}
+.quote::after{content:'"'}
+section{position:relative;z-index:1;padding:120px 24px;max-width:1200px;margin:0 auto}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--grey);margin-bottom:40px;display:flex;align-items:center;gap:12px}
+.label::before{content:'';width:24px;height:1px;background:var(--grey)}
+h2{font-size:clamp(32px,5vw,56px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:48px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:difference}
+nav .logo{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:2px}
+nav ul{display:flex;gap:24px;list-style:none}
+nav ul a{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.6;transition:opacity .3s}
+nav ul a:hover{opacity:1}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:100px}
+.hero-title{font-size:clamp(48px,10vw,140px);font-weight:900;letter-spacing:-4px;line-height:.9}
+.hero-title .dot{color:var(--accent)}
+.hero-sub{font-family:var(--mono);font-size:clamp(14px,2vw,20px);color:var(--accent);margin:24px 0 8px;letter-spacing:2px}
+.hero-meta{font-family:var(--mono);font-size:12px;color:var(--grey);letter-spacing:3px;margin-bottom:40px}
+.hero-manifesto{font-size:clamp(16px,2vw,22px);max-width:680px;line-height:1.7;font-weight:300;color:rgba(240,240,240,.8)}
+.hero-manifesto strong{font-weight:700;color:var(--white)}
+.hero-scroll{position:absolute;bottom:40px;left:24px;font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--grey);writing-mode:vertical-rl;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2px}
+.project-card{border:1px solid rgba(255,255,255,.08);padding:32px;position:relative;transition:all .4s;cursor:pointer;overflow:hidden}
+.project-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .4s}
+.project-card:hover{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.15)}
+.project-card:hover::before{height:100%}
+.project-card .card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.project-card .card-num{font-family:var(--mono);font-size:11px;color:var(--grey)}
+.project-card .card-status{font-family:var(--mono);font-size:10px;letter-spacing:2px;padding:3px 8px;border:1px solid}
+.status-live{color:#4caf50;border-color:#4caf50}
+.status-soon{color:var(--accent);border-color:var(--accent)}
+.status-dev{color:#ffc107;border-color:#ffc107}
+.project-card h3{font-size:24px;font-weight:900;letter-spacing:-1px;margin-bottom:4px}
+.project-card .card-cat{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--accent);margin-bottom:12px}
+.project-card .card-desc{font-size:14px;color:var(--grey);line-height:1.5}
+.project-card .card-link{font-family:var(--mono);font-size:11px;color:var(--grey);margin-top:16px;display:block;opacity:0;transition:opacity .3s}
+.project-card:hover .card-link{opacity:1}
+
+/* STORY */
+.story-lines{max-width:600px}
+.story-lines p{font-size:clamp(20px,3vw,36px);font-weight:700;letter-spacing:-1px;line-height:1.4;margin-bottom:8px;opacity:0;transform:translateY(20px);transition:all .6s}
+.story-lines p.visible{opacity:1;transform:translateY(0)}
+.story-lines .story-quote{color:var(--accent);font-style:italic;margin-top:32px;font-weight:400;font-size:clamp(16px,2.5vw,28px)}
+
+/* MUSIC */
+.music-brands{display:flex;flex-wrap:wrap;gap:24px;margin-top:32px}
+.music-brand{font-family:var(--mono);font-size:14px;padding:12px 24px;border:1px solid rgba(255,255,255,.15);transition:all .3s}
+.music-brand:hover{border-color:var(--accent);color:var(--accent)}
+.music-tagline{font-size:clamp(18px,2.5vw,32px);font-weight:300;color:var(--grey);margin-top:48px}
+
+/* JOURNAL */
+.journal-placeholder{font-family:var(--mono);font-size:14px;color:var(--grey);padding:48px;border:1px dashed rgba(255,255,255,.1);text-align:center;line-height:2}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:48px}
+.contact-left h3{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:24px}
+.contact-links{display:flex;flex-direction:column;gap:16px}
+.contact-links a{font-family:var(--mono);font-size:14px;display:flex;align-items:center;gap:12px;opacity:.6;transition:all .3s}
+.contact-links a:hover{opacity:1;color:var(--accent)}
+.contact-links a::before{content:'→';color:var(--accent)}
+.contact-right{font-size:16px;color:var(--grey);line-height:1.8}
+.social-row{display:flex;gap:24px;margin-top:32px}
+.social-row a{font-family:var(--mono);font-size:12px;letter-spacing:2px;opacity:.4;transition:opacity .3s}
+.social-row a:hover{opacity:1}
+
+/* FOOTER */
+footer{position:relative;z-index:1;padding:40px 24px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;max-width:1200px;margin:0 auto}
+footer span{font-family:var(--mono);font-size:11px;color:var(--grey);letter-spacing:2px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  section{padding:80px 20px}
+  .projects-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  nav ul{display:none}
+  .hero-title{letter-spacing:-2px}
+}
 </style>
 </head>
-<body class="font-sans text-gray-300 antialiased">
+<body>
 
-<!-- Hero -->
-<section class="hero-gradient min-h-screen flex items-center justify-center px-6">
-  <div class="max-w-3xl text-center fade-in">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-800 text-white leading-tight mb-6">
-      I built a brand that did <span class="text-brand">$100M/year</span>.<br>Now I'm building the next ten.
-    </h1>
-    <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">Founder. Builder. Doing it all in public.</p>
-    <a href="https://x.com/milliondwork" target="_blank" class="inline-flex items-center gap-2 bg-brand text-dark font-semibold px-8 py-3.5 rounded-full hover:bg-amber-400 transition-colors text-lg">
-      Follow the journey on X
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-    </a>
+<nav>
+  <div class="logo">MD.W</div>
+  <ul>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#music">Music</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-title">MILLION<br>DOLLAR<span class="dot"> .</span>WORK</div>
+  <div class="hero-sub"><span class="quote">BUILDING THINGS THAT MATTER</span></div>
+  <div class="hero-meta">CREATIVE STUDIO / VENTURE LAB / JAKARTA</div>
+  <p class="hero-manifesto">We built a brand that did <strong>$100M/year</strong>. Sold it. Now we're building <strong>10 more</strong>. This is the studio where it <span class="strike">happens</span> <strong>begins</strong>.</p>
+  <div class="hero-scroll">SCROLL ↓</div>
+</section>
+
+<section id="projects">
+  <div class="label"><span>001 — Projects</span></div>
+  <h2><span class="quote">PROJECTS</span></h2>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<section id="story">
+  <div class="label"><span>002 — The Story</span></div>
+  <h2><span class="quote">THE STORY</span></h2>
+  <div class="story-lines">
+    <p>Built a brand.</p>
+    <p><span class="accent">$100M/year.</span></p>
+    <p>Sold it.</p>
+    <p><span class="strike">Could've retired.</span></p>
+    <p>Didn't.</p>
+    <p>Now building across property, tech, food, fashion, gaming, wellness.</p>
+    <p>One studio. Multiple outputs. <span class="strike">No rules.</span></p>
+    <p class="story-quote">"The goal isn't one big thing. It's many great things."</p>
   </div>
 </section>
 
-<!-- Story -->
-<section class="py-24 px-6">
-  <div class="max-w-2xl mx-auto text-center fade-in">
-    <h2 class="text-sm font-semibold text-brand uppercase tracking-widest mb-6">The Story</h2>
-    <p class="text-xl sm:text-2xl text-gray-200 leading-relaxed">
-      Built and sold a <span class="text-white font-semibold">$100M/year brand</span>. Now building multiple businesses publicly — from AI tools to physical products to dating apps.
-    </p>
-    <p class="text-lg text-gray-400 mt-6">Follow along, invest, or just watch.</p>
+<section id="music">
+  <div class="label"><span>003 — Music</span></div>
+  <h2><span class="quote">MUSIC</span></h2>
+  <p style="color:var(--grey);margin-bottom:8px;font-size:14px" class="mono">ALBUMS ON SPOTIFY UNDER:</p>
+  <div class="music-brands">
+    <a href="https://open.spotify.com/search/Vaerke" target="_blank" class="music-brand">VAERKE</a>
+    <a href="https://open.spotify.com/search/Or.Life" target="_blank" class="music-brand">OR.LIFE</a>
+    <a href="https://open.spotify.com/search/Jewelzae" target="_blank" class="music-brand">JEWELZAE</a>
+    <a href="https://open.spotify.com/search/Alyanoor" target="_blank" class="music-brand">ALYANOOR</a>
+  </div>
+  <p class="music-tagline"><span class="quote">Every brand has a soundtrack</span></p>
+</section>
+
+<section id="journal">
+  <div class="label"><span>004 — Journal</span></div>
+  <h2><span class="quote">JOURNAL</span></h2>
+  <div class="journal-placeholder">
+    Stories coming soon. Follow the build.<br>
+    <span class="accent">BUILD IN PUBLIC — DOCUMENT EVERYTHING</span>
   </div>
 </section>
 
-<!-- Projects -->
-<section class="py-24 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-sm font-semibold text-brand uppercase tracking-widest mb-12 text-center fade-in">Current Projects</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="projects"></div>
-  </div>
-</section>
-
-<!-- Invest -->
-<section class="py-24 px-6 border-t border-white/5">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center fade-in mb-16">
-      <h2 class="text-3xl sm:text-4xl font-800 text-white mb-4">Back the Next $100M Brand</h2>
-      <p class="text-lg text-gray-400">I'm building in public. You can be part of the journey.</p>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Observer -->
-      <div class="invest-card rounded-2xl p-8 fade-in transition-all duration-300">
-        <div class="text-3xl mb-3">🌱</div>
-        <h3 class="text-xl font-bold text-white mb-1">Observer</h3>
-        <p class="text-brand font-bold text-2xl mb-6">$100</p>
-        <ul class="space-y-3 text-sm text-gray-400 mb-8">
-          <li>Monthly behind-the-scenes updates</li>
-          <li>Private Telegram group access</li>
-          <li>Early access to all products</li>
-          <li class="italic text-gray-500">"See how the sausage gets made"</li>
-        </ul>
-        <a href="https://x.com/milliondwork" target="_blank" class="block text-center bg-brand text-dark font-semibold px-6 py-3 rounded-full hover:bg-amber-400 transition-colors">DM on X →</a>
+<section id="contact">
+  <div class="label"><span>005 — Contact</span></div>
+  <div class="contact-grid">
+    <div class="contact-left">
+      <h3><span class="quote">Let's talk</span></h3>
+      <div class="contact-links">
+        <a href="https://wa.me/628131102445" target="_blank">WhatsApp</a>
+        <a href="https://t.me/+qrHYhmrC2NoyNWVl" target="_blank">Telegram Channel</a>
+        <a href="mailto:hello@milliondollar.work">Email</a>
       </div>
-      <!-- Backer -->
-      <div class="invest-card rounded-2xl p-8 fade-in transition-all duration-300">
-        <div class="text-3xl mb-3">🚀</div>
-        <h3 class="text-xl font-bold text-white mb-1">Backer</h3>
-        <p class="text-brand font-bold text-2xl mb-6">$500</p>
-        <ul class="space-y-3 text-sm text-gray-400 mb-8">
-          <li>Everything in Observer</li>
-          <li>0.1% revenue share on ONE project of your choice (2 years)</li>
-          <li>Quarterly video call</li>
-          <li>Your name on the wall (website credits)</li>
-        </ul>
-        <a href="https://x.com/milliondwork" target="_blank" class="block text-center bg-brand text-dark font-semibold px-6 py-3 rounded-full hover:bg-amber-400 transition-colors">DM on X →</a>
-      </div>
-      <!-- Partner -->
-      <div class="invest-card rounded-2xl p-8 fade-in transition-all duration-300">
-        <div class="text-3xl mb-3">💎</div>
-        <h3 class="text-xl font-bold text-white mb-1">Partner</h3>
-        <p class="text-brand font-bold text-2xl mb-6">$2,500</p>
-        <ul class="space-y-3 text-sm text-gray-400 mb-8">
-          <li>Everything in Backer</li>
-          <li>0.5% revenue share on ONE project (2 years)</li>
-          <li>Monthly 1-on-1 call</li>
-          <li>Advisory input on direction</li>
-          <li>First dibs on future projects</li>
-        </ul>
-        <a href="https://x.com/milliondwork" target="_blank" class="block text-center bg-brand text-dark font-semibold px-6 py-3 rounded-full hover:bg-amber-400 transition-colors">DM on X →</a>
+      <div class="social-row">
+        <a href="#">X</a>
+        <a href="#">IG</a>
+        <a href="#">TIKTOK</a>
       </div>
     </div>
-    <p class="text-center text-xs text-gray-600 mt-8 fade-in">Revenue share via simple agreement. Not securities. Not financial advice.</p>
-  </div>
-</section>
-
-<!-- Philosophy -->
-<section class="py-24 px-6 border-t border-white/5">
-  <div class="max-w-3xl mx-auto text-center fade-in">
-    <h2 class="text-sm font-semibold text-brand uppercase tracking-widest mb-12">The Rules</h2>
-    <div class="space-y-6 text-xl sm:text-2xl font-semibold text-white">
-      <p>"Ship fast. Fix later."</p>
-      <p>"Revenue &gt; funding."</p>
-      <p>"Build what people need, not what sounds cool."</p>
-      <p>"Transparency wins. Every number, every failure, every win — public."</p>
-      <p class="text-brand">"One person can build a $100M brand. I proved it."</p>
+    <div class="contact-right">
+      <p style="margin-bottom:24px">Interested in investing? Partnering? Just watching?</p>
+      <p class="accent" style="font-weight:700">All welcome.</p>
     </div>
   </div>
 </section>
 
-<!-- Connect -->
-<section class="py-24 px-6 border-t border-white/5">
-  <div class="max-w-2xl mx-auto text-center fade-in">
-    <h2 class="text-sm font-semibold text-brand uppercase tracking-widest mb-6">Follow the Journey</h2>
-    <p class="text-gray-400 mb-10">DM me on X if you want to collaborate, invest, or just talk business.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="https://x.com/milliondwork" target="_blank" class="inline-flex items-center justify-center gap-2 bg-white text-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-200 transition-colors">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        Follow on X
-      </a>
-      <a href="https://t.me/+qrHYhmrC2NoyNWVl" target="_blank" class="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">
-        Join Telegram
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="py-10 px-6 border-t border-white/5 text-center text-sm text-gray-500">
-  <p>&copy; LLJ Inc. &middot; milliondollar.work</p>
+<footer>
+  <span>© MILLIONDOLLAR.WORK — A CREATIVE STUDIO</span>
+  <span>JAKARTA / KARAWANG</span>
 </footer>
 
 <script>
-const projects = [
-  { name: "Cocok", desc: "AI-powered dating app for Indonesia", status: "live", url: "https://cocok.app" },
-  { name: "Dibantu", desc: "WhatsApp AI assistant for SMEs", status: "building", url: "https://dibantu.com" },
-  { name: "Bangun", desc: "AI construction cost estimation", status: "live", url: "https://bangun.com" },
-  { name: "FixoTrip", desc: "Travel emergency rescue ($19/emergency)", status: "live", url: "https://fixotrip.com" },
-  { name: "OLO Cafe", desc: "Physical cafe & brand in Karawang", status: "live", url: null },
+const projects=[
+{name:"Jewelzae",cat:"PROPERTY",desc:"Kavling premium Cisauk, 2km dari Stasiun Jatake",url:"https://jewelzae.com",status:"LIVE"},
+{name:"Dibantu",cat:"TECHNOLOGY",desc:"AI WhatsApp assistant untuk bisnis Indonesia",url:"https://dibantu.com",status:"LIVE"},
+{name:"Atusan",cat:"WELLNESS",desc:"Minyak herbal premium",url:"https://atusan.com",status:"LIVE"},
+{name:"Poowangi",cat:"LIFESTYLE",desc:"Toilet spray yang bikin fresh",url:"https://poowangi.com",status:"LIVE"},
+{name:"OLO Cafe",cat:"F&B",desc:"Cafe & community space, Karawang",url:"https://olo-cafe.vercel.app",status:"LIVE"},
+{name:"FixoTrip",cat:"TRAVEL",desc:"Travel emergency rescue via WhatsApp",url:"https://fixotrip.com",status:"LIVE"},
+{name:"Bangun",cat:"CONSTRUCTION",desc:"RAB & QTO service",url:"https://bangun.com",status:"LIVE"},
+{name:"Cocok",cat:"SOCIAL",desc:"Dating personality quiz",url:"https://cocok.vercel.app",status:"LIVE"},
+{name:"Mine-World",cat:"GAMING",desc:"Telegram Mini App game",url:"https://mine-world-psi.vercel.app",status:"LIVE"},
+{name:"DogDash",cat:"GAMING",desc:"Telegram Mini App game",url:"https://github.com/knulata/dogdash",status:"IN DEV"},
+{name:"Aura Fortune",cat:"ENTERTAINMENT",desc:"Daily cosmic fortune app",url:"https://webapp-gold-kappa.vercel.app",status:"LIVE"},
+{name:"Vaerke",cat:"FASHION",desc:"Coming soon",url:null,status:"SOON"},
+{name:"Or.Life",cat:"FASHION",desc:"Coming soon",url:null,status:"SOON"},
+{name:"Alyanoor",cat:"FASHION",desc:"Coming soon",url:null,status:"SOON"}
 ];
-const statusMap = { live: ['🟢','Live','text-green-400'], building: ['🟡','Building','text-yellow-400'], idea: ['🔴','Idea','text-red-400'] };
-const grid = document.getElementById('projects');
-projects.forEach(p => {
-  const [dot, label, cls] = statusMap[p.status];
-  const inner = `
-    <div class="flex items-center justify-between mb-3">
-      <h3 class="text-white font-semibold text-lg">${p.name}</h3>
-      <span class="text-xs ${cls} font-medium">${dot} ${label}</span>
-    </div>
-    <p class="text-gray-400 text-sm">${p.desc}</p>
-    ${p.url ? `<a href="${p.url}" target="_blank" class="inline-block mt-4 text-xs text-brand hover:underline">${p.url.replace('https://','')}&nbsp;→</a>` : ''}
-  `;
-  const el = document.createElement(p.url ? 'a' : 'div');
-  if (p.url) { el.href = p.url; el.target = '_blank'; }
-  el.className = 'card block bg-white/[0.03] border border-white/10 rounded-2xl p-6 fade-in';
-  el.innerHTML = inner;
-  grid.appendChild(el);
+const grid=document.getElementById('projectsGrid');
+projects.forEach((p,i)=>{
+const statusClass=p.status==='LIVE'?'status-live':p.status==='SOON'?'status-soon':'status-dev';
+const card=document.createElement(p.url?'a':'div');
+if(p.url){card.href=p.url;card.target='_blank'}
+card.className='project-card reveal';
+card.innerHTML=`<div class="card-top"><span class="card-num">${String(i+1).padStart(2,'0')}</span><span class="card-status ${statusClass}">${p.status}</span></div><h3>${p.name}</h3><div class="card-cat">"${p.cat}"</div><div class="card-desc">${p.desc}</div>${p.url?`<span class="card-link">${p.url.replace('https://','').replace('http://','')}&nbsp;↗</span>`:''}`;
+grid.appendChild(card);
 });
 
-// Scroll animations
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+// Intersection Observer
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');if(!e.target.classList.contains('project-card'))obs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal, .story-lines p').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
